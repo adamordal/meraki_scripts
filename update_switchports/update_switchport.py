@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-'''Script to claim and add metadata to claimed devices'''
+
 import csv
 import json
 import time

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-sfptest.py
+get_sfps.py
 ----------
 Fetches SFP module inventory across all switches in an organization.
 Shows only populated SFP ports with speed and count summaries.
@@ -8,8 +8,14 @@ Shows only populated SFP ports with speed and count summaries.
 USAGE
 =====
 export MERAKI_API_KEY="…"                        # or pass --api-key
-python sfptest.py --org-id 123456
-python sfptest.py --org-id 123456 --base-url https://api.eu.meraki.com/api/v1
+python get_sfps.py --org-id 123456
+python get_sfps.py --org-id 123456 --base-url https://api.eu.meraki.com/api/v1
+
+OUTPUT OPTIONS
+==============
+python get_sfps.py --org-id 123456 --csv         # Save results to CSV file
+python get_sfps.py --org-id 123456 --json        # Save detailed JSON data
+python get_sfps.py --org-id 123456 --csv --json  # Save both CSV and JSON
 """
 
 from __future__ import annotations

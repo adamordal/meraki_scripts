@@ -20,7 +20,7 @@ Script: `get_meraki_config.py`
 ```powershell
 # (Optional) Create and activate a virtual environment
 python -m venv .venv
-. .venv/Scripts/Activate.ps1
+. .\.venv\Scripts\Activate.ps1
 
 # Install dependencies
 pip install --upgrade meraki
@@ -56,6 +56,16 @@ Run `--help` to see options:
 ```powershell
 python .\get_meraki_config.py --help
 ```
+
+### Options
+- `--network-id N_...` Meraki Network ID (canonical ID beginning with `N_`)
+- `--network-url URL` Dashboard URL that contains `/n/N_...` for the target network
+- `--network-name NAME` Network name (use with `--org-id`)
+- `--org-id ORG_ID` Organization ID (required with `--network-name`)
+- `--combined` Also write a combined CSV for all switches
+- `--out-dir PATH` Directory to write CSV/JSON outputs (default: current directory)
+- `--l3` Also export per-switch Layer 3 interfaces (SVIs) and static routes
+- `--ospf` Also export network-level OSPF routing config (JSON)
 
 ### Common examples
 ```powershell
